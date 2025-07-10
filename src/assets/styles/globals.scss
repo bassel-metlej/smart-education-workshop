@@ -1,0 +1,41 @@
+@import './variables.scss';
+@import './screen-sizes.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    overflow-x: hidden;
+}
+
+// Responsive utilities
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    // Prevent horizontal scroll on mobile
+    .ant-layout {
+        overflow-x: hidden;
+    }
+}
+
+// Ensure proper touch targets on mobile
+@media (max-width: 768px) {
+    .ant-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .ant-menu-item {
+        min-height: 48px;
+        line-height: 48px;
+    }
+}
+

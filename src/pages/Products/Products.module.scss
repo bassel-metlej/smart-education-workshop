@@ -1,0 +1,70 @@
+@import '../../assets/styles/screen-sizes.scss';
+
+.Products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+
+    @media (max-width: $sm) {
+        gap: 10px;
+    margin: 50px auto;
+
+    }
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+}
+
+.scrollSentinel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 60px;
+    width: 100%;
+}
+
+.loadingIndicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid #e0e0e0;
+        border-top: 2px solid #007bff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+.endMessage {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

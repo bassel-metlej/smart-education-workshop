@@ -1,0 +1,58 @@
+$primary: #ffffff;
+$secondary: #000000;
+$tertiary: red;
+
+// Primary color variants
+$primary-hover: #f5f5f5;
+$primary-active: #e6e6e6;
+
+// Secondary color variants
+$secondary-hover: #333333;
+$secondary-active: #1a1a1a;
+
+$success: #52c41a;
+$success-light: #73d13d;
+$success-dark: #389e0d;
+
+$warning: #faad14;
+$warning-light: #ffd666;
+$warning-dark: #d48806;
+
+$error: #ff4d4f;
+$error-light: #ff7875;
+$error-dark: #d9363e;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.5rem;
+
+:root {
+    --primary: #{$primary};
+    --primary-hover: #{$primary-hover};
+    --primary-active: #{$primary-active};
+    --secondary: #{$secondary};
+    --secondary-hover: #{$secondary-hover};
+    --secondary-active: #{$secondary-active};
+    --tertiary: #{$tertiary};
+
+    --success: #{$success};
+    --success-light: #{$success-light};
+    --success-dark: #{$success-dark};
+
+    --warning: #{$warning};
+    --warning-light: #{$warning-light};
+    --warning-dark: #{$warning-dark};
+
+    --error: #{$error};
+    --error-light: #{$error-light};
+    --error-dark: #{$error-dark};
+
+    --font-size-xs: #{$font-size-xs};
+    --font-size-sm: #{$font-size-sm};
+    --font-size-md: #{$font-size-md};
+    --font-size-lg: #{$font-size-lg};
+    --font-size-xl: #{$font-size-xl};
+}
+
