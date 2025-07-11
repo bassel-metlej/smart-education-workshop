@@ -86,10 +86,10 @@ const ShoppingCartDetails: React.FC<ShoppingCartDetailsProps> = ({ onContinueSho
                     </Typography>
                 </div>
                 <div className={styles.cartActions}>
-                    <CustomButton variant="secondary" size="lg" onClick={clearCart}>
+                    <CustomButton variant="secondary" size="md" onClick={clearCart}>
                         Clear Cart
                     </CustomButton>
-                    <CustomButton variant="primary" size="lg" onClick={() => navigate('/')}>
+                    <CustomButton variant="primary" size="md" onClick={() => navigate('/')}>
                         Continue Shopping
                     </CustomButton>
                 </div>

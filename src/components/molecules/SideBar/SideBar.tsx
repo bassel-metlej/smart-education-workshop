@@ -10,6 +10,7 @@ import { useNavigate, useLocation } from 'react-router';
 import styles from './SideBar.module.scss';
 import type { SideBarProps } from './SideBar.type';
 import { useIsMobile } from '../../../hooks/useIsMobile';
+import { Typography } from '../../atoms';
 
 const { Sider } = Layout;
 
@@ -84,12 +85,14 @@ const SideBar: React.FC<SideBarProps> = () => {
     <Sider
       trigger={null}
       collapsible
-      width={250}
+      width="100%"
       className={styles.sider}
       role="navigation"
       aria-label="Desktop navigation menu"
     >
-      <div className={styles.header}>Smart Education</div>
+      <div className={styles.header}>
+        <Typography variant="heading2" color='secondary'>Smart Education</Typography>
+      </div>
       <Menu
         mode="inline"
         selectedKeys={[location.pathname]}

@@ -21,9 +21,6 @@ const ShoppingCart: React.FC = () => {
           <Typography variant="body2" color="secondary">
             {state.totalItems} items
           </Typography>
-          <Typography variant="heading5" color="secondary" >
-            ${state.totalPrice.toFixed(2)}
-          </Typography>
         </div>
       </div>
 

@@ -5,13 +5,21 @@
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
+
+  @media (min-width:$xxl) {
+    font-size: var(--font-size-xxxl);
+  }
 }
 
 .heading2 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
+
+  @media (min-width:$xxl) {
+    font-size: var(--font-size-xxl);
+  }
 }
 
 .heading3 {
@@ -19,6 +27,10 @@
   font-weight: 600;
   line-height: 1.4;
   margin: 0;
+
+  @media (min-width:$xxl) {
+    font-size: var(--font-size-xxl);
+  }
 }
 
 .heading4 {
@@ -26,6 +38,10 @@
   font-weight: 600;
   line-height: 1.4;
   margin: 0;
+
+  @media (max-width:$xxl) {
+    font-size: var(--font-size-xl);
+  }
 }
 
 .heading5 {

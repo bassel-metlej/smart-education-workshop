@@ -27,6 +27,9 @@ $font-size-sm: 0.875rem;
 $font-size-md: 1rem;
 $font-size-lg: 1.125rem;
 $font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+$font-size-xxxl: 3rem;
+
 
 :root {
     --primary: #{$primary};
@@ -54,5 +57,7 @@ $font-size-xl: 1.5rem;
     --font-size-md: #{$font-size-md};
     --font-size-lg: #{$font-size-lg};
     --font-size-xl: #{$font-size-xl};
+    --font-size-xxl: #{$font-size-xxl};
+    --font-size-xxxl: #{$font-size-xxxl};
 }
 

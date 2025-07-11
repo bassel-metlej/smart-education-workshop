@@ -23,13 +23,13 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       const existingItemIndex = state.items.findIndex(item => item.product.id === product.id);
       
       if (existingItemIndex >= 0) {
-        // Update existing item quantity
+        // Update existing item quantity if it already exists in the cart
         const updatedItems = [...state.items];
         updatedItems[existingItemIndex] = {
           ...updatedItems[existingItemIndex],
           quantity: updatedItems[existingItemIndex].quantity + quantity,
         };
-        
+        // Update the total items and price of the cart
         return {
           ...state,
           items: updatedItems,

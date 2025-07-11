@@ -13,7 +13,7 @@ const HomeCardContent: React.FC<HomeCardContentProps> = ({
 
     return (
         <div className={styles.productInfo}>
-            <Typography variant="heading2" color='secondary' className={styles.productName} title={name}>{name}</Typography>
+            <Typography variant="heading3" color='secondary' className={styles.productName} title={name}>{name}</Typography>
             <div className={styles.productInfoFooter}>
                 <Typography variant="body2" color='secondary' className={styles.productDescription}>{description}</Typography>
                 <Typography variant="body2" color='secondary'>$ {price}</Typography>

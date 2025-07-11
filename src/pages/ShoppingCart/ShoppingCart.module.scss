@@ -1,14 +1,11 @@
 @import '../../assets/styles/screen-sizes.scss';
 
 .shoppingCart {
-  max-width: 1200px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   
   @media (max-width:$sm) {
-    padding: 0px;
     margin-top: 50px;
   }
 }
