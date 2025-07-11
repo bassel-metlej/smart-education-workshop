@@ -1,0 +1,58 @@
+.productDetailsModal {
+  :global(.ant-modal-content) {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.productDetailsContent {
+  padding: 20px 0;
+}
+
+.productCardContainer {
+  margin-bottom: 24px;
+  
+  // Override ProductCard styles for modal display
+  :global(.productCard) {
+    box-shadow: none;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+  }
+}
+
+.productActions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.quantitySection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+  label {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 14px;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.noProduct {
+  text-align: center;
+  padding: 40px 20px;
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--secondary);
+  }
+}

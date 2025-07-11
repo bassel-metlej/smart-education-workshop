@@ -26,9 +26,7 @@ const importPage = (page: keyof typeof import("../pages")) =>
 
 const RootLayout = importTemplate("RootLayout");
 const Products = importPage("Products");
-const AboutPage = importPage("AboutPage");
-const ContactPage = importPage("ContactPage");
-const DashboardPage = importPage("DashboardPage");
+const ShoppingCart = importPage("ShoppingCart");
 
 const Routes = () => {
   const router = createBrowserRouter(
@@ -39,9 +37,7 @@ const Routes = () => {
           element={<RootLayout />}
         >
           <Route path="/" element={<Products />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/cart" element={<ShoppingCart />} />
         </Route>
         <Route
           path="*"

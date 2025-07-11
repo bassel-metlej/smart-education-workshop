@@ -1,0 +1,38 @@
+.productInfo {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+    gap: 16px;
+
+    .productName {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        word-break: break-word !important;
+        line-height: 1.2 !important;
+        max-height: 2.4em !important;
+    }
+
+    .productDescription {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        word-break: break-word !important;
+        line-height: 1.4 !important;
+        max-height: 2.8em !important;
+    }
+
+    .productInfoFooter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}

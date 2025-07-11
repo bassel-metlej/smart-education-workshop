@@ -33,6 +33,7 @@ const variantMap: Record<TypographyVariant, string> = {
 
 export const Typography: React.FC<TypographyProps> = ({
   children,
+  title,
   variant = 'body1',
   color,
   className = '',
@@ -46,6 +47,7 @@ export const Typography: React.FC<TypographyProps> = ({
     <div
       {...props}
       className={classNames(variantClass, colorClass, className)}
+      title={title}
       style={style}
     >
       {children}

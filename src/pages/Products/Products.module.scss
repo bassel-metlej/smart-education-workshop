@@ -9,7 +9,7 @@
 
     @media (max-width: $sm) {
         gap: 10px;
-    margin: 50px auto;
+        margin: 50px auto;
 
     }
 }
@@ -21,12 +21,12 @@
     padding: 10px 0;
 
 
-    @media (max-width: 480px) {
+    @media (max-width: $xsm) {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $sm) {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1.5rem;
     }
@@ -46,13 +46,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
     &::before {
         content: '';
         width: 20px;
         height: 20px;
-        border: 2px solid #e0e0e0;
-        border-top: 2px solid #007bff;
+        border: 2px solid var(--primary);
+        border-top: 2px solid var(--tertiary);
         border-radius: 50%;
         animation: spin 1s linear infinite;
     }
@@ -61,10 +61,15 @@
 .endMessage {
     text-align: center;
     padding: 20px;
-    color: #666;
+    color: var(--secondary);
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.productCardWrapper {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 }

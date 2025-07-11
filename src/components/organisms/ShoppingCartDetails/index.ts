@@ -1,0 +1,1 @@
+export { ShoppingCartDetails } from './ShoppingCartDetails';

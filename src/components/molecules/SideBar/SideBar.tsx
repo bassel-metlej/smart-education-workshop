@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Layout, Menu, Button } from 'antd';
+import { Layout, Menu, Button, Badge } from 'antd';
 import {
   HomeOutlined,
   BookOutlined,
-  UserOutlined,
-  TeamOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from '@ant-design/icons';
@@ -18,9 +16,7 @@ const { Sider } = Layout;
 // Inline menu items
 const MENU_ITEMS = [
   { key: '/', icon: <HomeOutlined />, label: 'Products' },
-  { key: '/about', icon: <BookOutlined />, label: 'Courses' },
-  { key: '/contact', icon: <UserOutlined />, label: 'Students' },
-  { key: '/dashboard', icon: <TeamOutlined />, label: 'Teachers' },
+  { key: '/cart', icon: <BookOutlined />, label: 'Cart' },
 ];
 
 const SideBar: React.FC<SideBarProps> = () => {

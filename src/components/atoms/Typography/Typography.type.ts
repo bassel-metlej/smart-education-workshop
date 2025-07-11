@@ -31,5 +31,6 @@ export interface TypographyProps {
   variant?: TypographyVariant;
   color?: TypographyColor;
   className?: string;
+  title?: string;
   style?: React.CSSProperties;
 }

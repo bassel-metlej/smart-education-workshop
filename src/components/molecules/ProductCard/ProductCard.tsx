@@ -3,13 +3,13 @@ import styles from './ProductCard.module.scss';
 import type {
     ProductCardProps,
 } from './ProductCard.type';
-import { CardImage, Typography } from '../../atoms';
+import { CardImage } from '../../atoms';
 
-// Main ProductCard component
 const ProductCard: React.FC<ProductCardProps> = ({
     product,
     onImageLoad,
     isImageLoaded = false,
+    cardContent,
 }) => {
     const handleImageLoad = () => {
         onImageLoad?.(product.id);
@@ -23,13 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 isLoaded={isImageLoaded}
                 onLoad={handleImageLoad}
             />
-            <div className={styles.productInfo}>
-                <Typography variant="heading2" color='secondary'>{product.name}</Typography>
-                <div className={styles.productInfoFooter}>
-                    <Typography variant="body2" color='secondary' className={styles.productDescription}>{product.description}</Typography>
-                    <Typography variant="body2" color='secondary'>$ {product.price}</Typography>
-                </div>
-            </div>
+            {cardContent}
         </div>
     );
 };

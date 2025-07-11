@@ -8,6 +8,7 @@ export interface Product {
 
 export interface ProductCardProps {
   product: Product;
+  cardContent: React.ReactNode;
   onImageLoad?: (productId: number) => void;
   isImageLoaded?: boolean;
 }

@@ -1,16 +1,29 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './Products.module.scss';
 import { allProducts } from '../../utils/products';
-import { ProductCard } from '../../components/molecules';
+import { HomeCardContent, ProductCard } from '../../components/molecules';
+import { ProductDetails } from '../../components/organisms';
 import { Typography } from '../../components/atoms';
 
 const Products = () => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [visibleProducts, setVisibleProducts] = useState<number>(20);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [selectedProductId, setSelectedProductId] = useState<number | undefined>();
 
   const handleImageLoad = (productId: number) => {
     setLoadedImages(prev => new Set(prev).add(productId));
+  };
+
+  const handleProductClick = (productId: number) => {
+    setSelectedProductId(productId);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedProductId(undefined);
   };
 
   const loadMoreProducts = useCallback(() => {
@@ -57,12 +70,18 @@ const Products = () => {
       <Typography variant="heading1" color='secondary'>Our Products</Typography>
       <div className={styles.productsGrid}>
         {allProducts.slice(0, visibleProducts).map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onImageLoad={handleImageLoad}
-            isImageLoaded={loadedImages.has(product.id)}
-          />
+          <div 
+            key={product.id} 
+            className={styles.productCardWrapper}
+            onClick={() => handleProductClick(product.id)}
+          >
+            <ProductCard
+              product={product}
+              onImageLoad={handleImageLoad}
+              isImageLoaded={loadedImages.has(product.id)}
+              cardContent={<HomeCardContent name={product.name} description={product.description} price={product.price} />}
+            />
+          </div>
         ))}
       </div>
       
@@ -78,6 +97,13 @@ const Products = () => {
           </div>
         )}
       </div>
+      
+      <ProductDetails
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        productId={selectedProductId}
+        products={allProducts}
+      />
     </div>
   );
 };
